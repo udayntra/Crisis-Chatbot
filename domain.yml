@@ -1,0 +1,53 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - report_flood
+  - report_fire
+  - medical_help
+  - request_shelter
+  - provide_location
+  - power_outage
+
+entities:
+  - location
+
+slots:
+  location:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: location
+
+responses:
+  utter_greet:
+    - text: "Hello, I am your AI emergency assistant. Please describe your situation."
+
+  utter_goodbye:
+    - text: "Stay safe. If the situation worsens, contact emergency services immediately."
+
+  utter_ask_location:
+    - text: "Please share your location so I can provide nearby emergency resources."
+
+  utter_flood_advice:
+    - text: "Move to higher ground immediately. Avoid walking or driving through flood waters."
+
+  utter_fire_advice:
+    - text: "Evacuate the building immediately and avoid smoke inhalation."
+
+  utter_medical_advice:
+    - text: "Call emergency medical services right away. Provide first aid if trained."
+
+  utter_power_advice:
+    - text: "Use flashlights instead of candles and unplug sensitive electronics."
+
+actions:
+  - action_provide_shelter
+  - action_escalate_emergency
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
