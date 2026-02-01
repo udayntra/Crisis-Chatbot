@@ -1,0 +1,72 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hello
+    - hi
+    - hey
+    - good morning
+    - good evening
+
+- intent: goodbye
+  examples: |
+    - bye
+    - goodbye
+    - thanks bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - correct
+    - exactly
+    - right
+
+- intent: deny
+  examples: |
+    - no
+    - not really
+    - I don't think so
+
+- intent: report_flood
+  examples: |
+    - my house is flooded
+    - water is rising rapidly
+    - streets are underwater
+    - flood near my home
+    - river overflowed
+
+- intent: report_fire
+  examples: |
+    - my building is on fire
+    - wildfire nearby
+    - I see heavy smoke
+    - flames are spreading
+
+- intent: medical_help
+  examples: |
+    - someone is injured
+    - need an ambulance
+    - medical emergency
+    - person unconscious
+
+- intent: request_shelter
+  examples: |
+    - where is the nearest shelter
+    - I need a safe place
+    - evacuation center nearby
+    - help me find shelter
+
+- intent: provide_location
+  examples: |
+    - I am in Berlin
+    - located in downtown
+    - my location is London
+    - currently in sector 5
+
+- intent: power_outage
+  examples: |
+    - there is a blackout
+    - no electricity here
+    - power outage in my area

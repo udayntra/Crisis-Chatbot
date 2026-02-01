@@ -1,0 +1,32 @@
+version: "3.1"
+
+stories:
+- story: flood emergency
+  steps:
+  - intent: report_flood
+  - action: utter_flood_advice
+  - action: utter_ask_location
+
+- story: fire emergency
+  steps:
+  - intent: report_fire
+  - action: utter_fire_advice
+  - action: utter_ask_location
+
+- story: medical emergency
+  steps:
+  - intent: medical_help
+  - action: utter_medical_advice
+  - action: action_escalate_emergency
+
+- story: shelter flow
+  steps:
+  - intent: request_shelter
+  - action: utter_ask_location
+  - intent: provide_location
+  - action: action_provide_shelter
+
+- story: greet path
+  steps:
+  - intent: greet
+  - action: utter_greet
